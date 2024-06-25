@@ -16,7 +16,6 @@ public class CashBackHackerTest {
 
         assertEquals(actual, expected);
     }
-
     @org.testng.annotations.Test
     public void notShouldRemindSpend100() {
 
