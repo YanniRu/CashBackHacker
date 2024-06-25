@@ -28,4 +28,16 @@ public class CashBackHackerTest {
 
         assertEquals(actual, expected);
     }
+    @Test
+    void notShouldRemindSpend100 () {
+
+        CashBackHacker cbh = new CashBackHacker();
+
+        int amount = 1000;
+
+        int actual = cbh.remain(amount);
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
 }
