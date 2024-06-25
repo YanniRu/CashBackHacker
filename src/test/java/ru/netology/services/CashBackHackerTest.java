@@ -16,6 +16,19 @@ public class CashBackHackerTest {
 
         assertEquals(actual, expected);
     }
+
+    @org.testng.annotations.Test
+    public void shouldRemindSpend500() {
+
+        CashBackHacker cbh = new CashBackHacker();
+
+        int amount = 500;
+
+        int actual = cbh.remain(amount);
+        int expected = 500;
+
+        assertEquals(actual, expected);
+    }
     @org.testng.annotations.Test
     public void notShouldRemindSpend100() {
 
@@ -28,16 +41,17 @@ public class CashBackHackerTest {
 
         assertEquals(actual, expected);
     }
-    @Test
-    void notShouldRemindSpend100 () {
+
+    @org.testng.annotations.Test
+    void notShouldRemindSpend100again() {
 
         CashBackHacker cbh = new CashBackHacker();
 
-        int amount = 1000;
+        int amount = 1100;
 
         int actual = cbh.remain(amount);
         int expected = 0;
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 }
